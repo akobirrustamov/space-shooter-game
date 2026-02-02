@@ -2,7 +2,7 @@ name: Update Space Shooter Game
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Daily at midnight UTC
+    - cron: '0 0 * * *'   # каждый день в 00:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -14,9 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: czl9707/gh-space-shooter@v1
+      - name: Generate Space Shooter GIF
+        uses: czl9707/gh-space-shooter@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          output-path: 'game.gif'
-          strategy: 'random'
+          username: akobirrustamov   # 👈 ЯВНО указываем
+          output-path: game.gif
+          strategy: random
+          fps: 40
+          commit-message: "chore: update space shooter game gif"
 
