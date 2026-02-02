@@ -1,6 +1,5 @@
 # Space Shooter Game 🎮
 
-This game GIF updates automatically every day using GitHub Actions.
+Automatically generated from my GitHub contributions using GitHub Actions.
 
-![Space Shooter Game](./game.gif)
-
+![My GitHub Game](game.gif)
